@@ -1,0 +1,8 @@
+.cartContainer {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-sizing: border-box;
+
+}

@@ -1,0 +1,27 @@
+.content{
+    background-color: var(--background-color);
+    display: flex;
+    width: 100%;
+    min-height: 100svh;
+    padding-left: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-top: 3.25rem;
+    padding-right: 0.25rem;
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-y: hidden;
+    z-index: 1;
+
+    @media (min-width: 768px) { 
+        padding-left: 4.5rem;
+        padding-top: 4.5rem;
+    }
+}
+
+a {
+    all: unset;
+}
+
+#root{
+    overflow-x: hidden;
+}

@@ -1,0 +1,32 @@
+#dashboardRoot {
+    width: 100%;
+}
+
+.characterCart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 1px solid black;
+    /* width: 100%; */
+    /* box-sizing: border-box; */
+    @media (min-width: 768px) {
+        /* width: 45rem; */
+    }
+}
+
+.characterCart > .characterCartTitle{
+    font-size: 2rem;
+}
+
+.characterCart > img{
+    width: 90svw;
+    /* box-sizing: border-box; */
+    @media (min-width: 768px) {
+        width: 25rem;
+    }
+}
+
+

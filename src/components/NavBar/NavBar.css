@@ -1,0 +1,174 @@
+.hamburger, .usericon{
+    width: 1.5rem;
+    @media (min-width: 768px) { 
+        width: 2.5rem;
+    }
+}
+
+.navbar {
+    height: 3rem;
+    background-color: var(--background-color);
+    padding: 1rem 1rem;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    left: 0;
+    top: 0;
+    align-items: center;
+    z-index: 998;
+    box-sizing: border-box;
+    justify-content: space-between;
+
+    border-bottom: 1px solid black;
+
+    @media (min-width: 768px) { 
+        height: 4.25rem;
+    }
+}
+
+.usericon{
+    border-radius: 50%;
+}
+
+.sidemenu {
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100svh;
+    z-index: 15;
+    width: 0rem;
+    box-sizing: border-box;
+    padding-top: 3rem;
+    transition: width 0.3s ease-in-out;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    border-right: 0;
+
+    color: var(--text-color);
+
+    transition: width 0.3s ease-in-out;
+    @media (min-width: 768px) { 
+        width: 4.25rem;
+        padding-top: 4.25rem;
+        border-right: 1px solid var(--border-color);
+    }
+
+}
+
+.sidemenu.active {
+    width: 12rem;
+    border-right: 1px solid var(--border-color);
+    @media (min-width: 768px) { 
+        width: 15rem;
+    }
+}
+
+.menu-item {
+    background-color: var(--background-color);
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    box-sizing: border-box;
+    max-height: 4.25rem;
+}
+
+.menu-item .icon {
+    width: 2.5rem; 
+    flex: 0 0 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    @media (min-width: 768px) { 
+        width: 4.25rem;
+        padding: 1rem;
+    }
+}
+
+.menu-item .text {
+    color: var(--text-color);
+    flex: 1;
+    padding: 0.25rem;
+    box-sizing: border-box;
+}
+
+
+.menu-item.gap {
+    margin-top: 1rem;
+}
+
+.menu-item:hover {
+    @media (min-width: 768px) { 
+        background-color: var(--secondary-color);
+    }   
+}
+
+.menu-item.active{
+    background-color: var(--primary-color);
+}
+
+.userContextMenu{
+    animation: 0.2s ease-in-out 0s 1 slideInFromRight;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 3.25rem;
+    right: 0;
+    z-index: 997;
+    border-radius: 1rem;
+    border: 1px solid var(--border-color);
+    background-color: var(--background-color);
+
+    @media (min-width: 768px) { 
+        top: 4.5rem;
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+      transform: translateY(-200%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+.userContextItem{
+    display: flex;
+    flex-direction: row;
+    flex: 1rem 1rem 1rem;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    gap: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+    cursor: pointer;
+}
+
+.userContextItem:hover{
+    @media (min-width: 768px) { 
+        background-color: var(--secondary-color);
+    }
+}
+
+.userContextItem:first-child{
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+.userContextItem:last-child{
+    border-bottom: 0;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.userContextItemIcon{
+    width: 1.5rem;
+}
+
+.userContextItemText{
+    font-size: inherit;
+}
